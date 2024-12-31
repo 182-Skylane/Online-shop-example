@@ -1,0 +1,261 @@
+.cart {
+    display: grid;
+    margin-top: 64px;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+
+    &__form {
+        grid-column: span 4;
+        background: #f7f6f6;
+        border-radius: 20px;
+        height: 556px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    &__content {
+        grid-column: span 8;
+    }
+
+    &__name-box {
+        padding-bottom: 14px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        padding-top: 25px;
+        padding-bottom: 32px;
+        border-top: 0.5px solid rgb(202, 205, 216);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__left {
+        display: flex;
+        gap: 32px;
+    }
+
+    &__info {
+        width: 276px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__name {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__item-text {
+        color: rgb(136, 136, 136);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__link-box {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__links {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 210%;
+        letter-spacing: 0px;
+        text-align: center;
+        text-decoration-line: underline;
+    }
+
+    &__links:hover {
+        text-decoration-line: none;
+    }
+
+    &__title {
+        padding-top: 42px;
+        padding-bottom: 35px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    &__input {
+        padding-bottom: 64px;
+        padding-left: 27px;
+        height: 143px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+    &__input-text {
+        font-family: $basic-font;
+        width: 288px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0px;
+        border-top: 1px solid rgb(247, 246, 246);
+        border-left: 1px solid rgb(247, 246, 246);
+        border-right: rgb(247, 246, 246);
+        border-bottom: 1px solid rgb(202, 205, 216);
+        background: rgb(247, 246, 246);
+        outline: none;
+    }
+
+    &__input-text::placeholder {
+        color: rgb(0, 0, 0);
+    }
+
+    &__price {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    &__price::before {
+        content: 'Итого: ';
+        font-weight: 400;
+    }
+
+    &__price::after {
+        content: ' руб.';
+        font-weight: 500;
+    }
+
+    &__order {
+        margin-top: 18px;
+        background: rgb(247, 246, 246);
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 290px;
+        height: 40px;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000000;
+        font-family: $basic-font;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0px;
+        align-self: center;
+    }
+
+    &__quantity {
+        font-family: $basic-font;
+        width: 71px;
+        height: 51px;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 210%;
+        letter-spacing: 0px;
+        text-align: center;
+        border: none;
+        border-radius: 6px;
+        background: rgb(247, 246, 246);
+        outline: none;
+    }
+
+    &__buttons-box {
+        padding-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 8px;
+    }
+
+    &__btn {
+        font-family: $basic-font;
+        width: 200px;
+        height: 37px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0px;
+        text-align: center;
+        box-sizing: border-box;
+        background-color: $color-text;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 50px;
+
+    }
+
+    &__btn:hover {
+        cursor: pointer;
+        background: black;
+        color: azure;
+        transition: 0.3s;
+    }
+
+    &__btn:active {
+        background: gray;
+        color: azure;
+        transition: 0.1s;
+    }
+
+    &__order:hover {
+        cursor: pointer;
+        background: black;
+        color: azure;
+        transition: 0.3s;
+    }
+
+    &__order:active {
+        background: gray;
+        color: azure;
+        transition: 0.1s;
+    }
+
+}
+
+.drop {
+    display: none;
+
+    &-item {
+        border: none;
+        padding-top: 0px;
+        padding-bottom: 26px;
+    }
+
+    &-info {
+        width: 210px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &-price {
+        color: rgb(5, 5, 5);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+
+        &::after {
+            content: ' руб.';
+        }
+    }
+
+    &-link-box {
+        display: flex;
+        gap: 30px;
+        margin-top: 56px;
+    }
+}
